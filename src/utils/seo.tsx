@@ -17,7 +17,7 @@ export const generateOpenGraph = (metadata: OpenGraph): OpenGraph => {
         url: "https://cms-admin.itsupport360.info/uploads/ads/1716757007-photo-6240297837539737134-y.jpeg",
         width: 800,
         height: 400,
-        alt: "TinyImage",
+        alt: "Open Graph Image",
         type: "image/jpeg",
       },
     ],
