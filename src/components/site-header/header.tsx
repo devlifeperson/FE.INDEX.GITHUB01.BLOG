@@ -5,6 +5,7 @@ import Link from "next/link";
 import { SocialLink } from "../base/social-link";
 
 import logo from "@/../public/logo.png";
+import { siteConfig } from "@/config/site";
 
 export const SiteHeader = () => {
   return (
@@ -14,25 +15,21 @@ export const SiteHeader = () => {
           <Link href="/">
             <Image src={logo} alt="Logo" height={32} width={32} />
           </Link>
-          <Link className="hover:text-indigo-600" href="/blog/1">
-            Blog
-          </Link>
-          <Link
-            className="hover:text-indigo-600"
-            href="https://seovn360.com"
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-          >
-            Index Tool
-          </Link>
-          <Link
-            className="hover:text-indigo-600"
-            href="https://app.google360s.com"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
-          >
-            Seo Tools
-          </Link>
+  
+          {siteConfig.mainNav.map((navItem, index) => {
+            const isExternal = navItem.href.startsWith("http");
+            return (
+              <Link
+                key={index}
+                href={navItem.href}
+                className="hover:text-indigo-600"
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "nofollow noopener noreferrer" : undefined}
+              >
+                {navItem.title}
+              </Link>
+            );
+          })}
         </nav>
 
         <nav className="ml-auto flex space-x-2">
