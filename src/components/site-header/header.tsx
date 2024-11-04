@@ -5,13 +5,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { publicEnv } from "@/config/public-env";
 
+import logo from "@/../public/logo.png";
+
 export const SiteHeader = () => {
   return (
     <header className="h-14 fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
       <div className="container flex h-full items-center justify-between">
         <nav className="flex items-center gap-6">
           <Link href="/">
-            <Image src={`${publicEnv.BASE_PATH}/logo.png`} alt="Logo" height={32} width={32} />
+            <Image src={logo} alt="Logo" height={32} width={32} />
           </Link>
           <Link className="hover:text-indigo-600" href="/blog/1">
             Blog

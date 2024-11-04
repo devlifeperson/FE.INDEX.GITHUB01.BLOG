@@ -4,7 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true, // Required for static export
   },
-  basePath: "/FE.INDEX.GITHUB01.BLOG", // Replace with your GitHub repository name
+  // basePath: "/FE.INDEX.GITHUB01.BLOG", // Replace with your GitHub repository name
+  basePath: "", // Replace with your GitHub repository name
   trailingSlash: true, // Recommended for GitHub Pages
 };
 

@@ -8,6 +8,7 @@ import {
 import { SocialLink } from "../base/social-link";
 import { siteConfig } from "@/config/site";
 import { publicEnv } from "@/config/public-env";
+import Link from "next/link";
 
 export const SiteFooter = () => {
   return (
@@ -21,7 +22,8 @@ export const SiteFooter = () => {
         </nav>
         <p className="text-center text-sm text-gray-500">
           © 2021 - 2024, Devlife Solution -{" "}
-          <a href={`${publicEnv.BASE_PATH}/sitemap_index.xml`}>SiteMap</a>
+          {/* <a href={`${publicEnv.BASE_PATH}/sitemap_index.xml`}>SiteMap</a> */}
+          <Link href="/sitemap_index.xml">SiteMap</Link>
         </p>
       </div>
     </footer>
