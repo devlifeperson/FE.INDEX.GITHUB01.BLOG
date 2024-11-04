@@ -5,10 +5,9 @@ import {
   RiYoutubeFill
 } from "@remixicon/react";
 
-import { SocialLink } from "../base/social-link";
 import { siteConfig } from "@/config/site";
-import { publicEnv } from "@/config/public-env";
 import Link from "next/link";
+import { SocialLink } from "../base/social-link";
 
 export const SiteFooter = () => {
   return (

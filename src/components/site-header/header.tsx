@@ -1,9 +1,8 @@
 import { RiMailLine, RiTwitterXLine } from "@remixicon/react";
 
-import { SocialLink } from "../base/social-link";
-import Link from "next/link";
 import Image from "next/image";
-import { publicEnv } from "@/config/public-env";
+import Link from "next/link";
+import { SocialLink } from "../base/social-link";
 
 import logo from "@/../public/logo.png";
 
