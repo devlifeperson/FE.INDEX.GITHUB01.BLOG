@@ -3,6 +3,7 @@ import { RiMailLine, RiTwitterXLine } from "@remixicon/react";
 import { SocialLink } from "../base/social-link";
 import Link from "next/link";
 import Image from "next/image";
+import { publicEnv } from "@/config/public-env";
 
 export const SiteHeader = () => {
   return (
@@ -10,7 +11,7 @@ export const SiteHeader = () => {
       <div className="container flex h-full items-center justify-between">
         <nav className="flex items-center gap-6">
           <Link href="/">
-            <Image src={"/FE.INDEX.GITHUB01.BLOG/logo.png"} alt="Logo" height={32} width={32} />
+            <Image src={`${publicEnv.BASE_PATH}/logo.png`} alt="Logo" height={32} width={32} />
           </Link>
           <Link className="hover:text-indigo-600" href="/blog/1">
             Blog

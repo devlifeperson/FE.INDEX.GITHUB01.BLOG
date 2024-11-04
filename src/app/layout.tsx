@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: "/FE.INDEX.GITHUB01.BLOG/logo.png",
+    icon: `${publicEnv.BASE_PATH}/logo.png`,
   },
   authors: {
     name: "Devlife Solution",
