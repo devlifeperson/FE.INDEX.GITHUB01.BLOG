@@ -45,7 +45,7 @@ export const getPostsForHome = async (page: number) => {
   }
 
   const currentPosts = safeParsedPosts.data.map((post) => {
-    const slugifyName = slugify(post.title ?? "no_name", { lower: true });
+    const slugifyName = slugify(post.title ?? "no_name", { lower: true, strict: true  });
     return {
       ...post,
       path: `/blog/${slugifyName}_${post.id}`,
